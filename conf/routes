@@ -1,0 +1,5 @@
+GET     /clear          controllers.IndexController.clear
+GET     /          controllers.IndexController.index
+
+GET		/get			controllers.IndexController.get(request : Request)
+POST	/post			controllers.IndexController.post(request : Request)

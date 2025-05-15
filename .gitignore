@@ -1,0 +1,13 @@
+.idea/
+logs/
+target/
+project/target/
+project/project/
+.env
+.envrc
+.DS_Store
+.bsp
+*.iml
+dist/
+compile.log
+webhook.log
