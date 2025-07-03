@@ -1,8 +1,11 @@
-VERSION=$(grep 'version := ' build.sbt | awk -F'"' '{print $2}')
-PROJECT_NAME=$(grep 'name := ' build.sbt | awk -F'"' '{print $2}')
 rm -rf dist
-sbt clean compile dist
-unzip target/universal/$PROJECT_NAME-$VERSION.zip
-mv $PROJECT_NAME-$VERSION dist
 
-# sbt clean compile stage
+while true; do
+	sbt clean compile dist
+
+	if [[ -e target/universal/$REPO_NAME-$REPO_VERSION.zip ]]; then
+		unzip target/universal/$REPO_NAME-$REPO_VERSION.zip > /dev/null
+		mv $REPO_NAME-$REPO_VERSION dist
+		break
+	fi
+done

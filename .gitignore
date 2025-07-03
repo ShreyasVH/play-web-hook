@@ -10,4 +10,4 @@ project/project/
 *.iml
 dist/
 compile.log
-webhook.log
+server.log
