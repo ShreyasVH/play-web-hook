@@ -29,7 +29,7 @@ public class LogRepository
         return CompletableFuture.supplyAsync(() -> {
             Request apiRequest = new Request();
             apiRequest.setMethod(method);
-            apiRequest.setPayload(request.body().asJson().toString());
+            apiRequest.setPayload(request.hasBody() ? request.body().asJson().toString(): "");
             apiRequest.setHeaders(Json.toJson(requestHeaders).toString());
             apiRequest.setReceivedAt(System.currentTimeMillis());
 
