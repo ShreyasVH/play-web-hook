@@ -4,13 +4,17 @@ export PATH=
 # java 11 path
 export PATH=
 
+export PORT=
+export DEBUG_PORT=
+
+export APPLICATION_SECRET=
+
+export REPO_VERSION=$(grep "version := " build.sbt | awk -F\" '{print $2}')
+export REPO_NAME=$(grep "name := " build.sbt | awk -F\" '{print $2}')
+
 export MYSQL_IP=
 export MYSQL_PORT=
 export MYSQL_DB_NAME=
 export MYSQL_USER=
 export MYSQL_PASSWORD=
-
-export APPLICATION_SECRET=
-
-export PORT=
-export DEBUG_PORT=
+export MYSQL_VERSION=
