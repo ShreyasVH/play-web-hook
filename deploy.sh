@@ -1,4 +1,4 @@
-cd $HOME/workspace/myProjects/java/play/play-web-hook
+cd /data/workspace/myProjects/java/play/play-web-hook
 
 if ! lsof -i :$PORT > /dev/null; then
     echo "Starting"
